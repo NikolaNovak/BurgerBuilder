@@ -4,7 +4,9 @@ import styles from "./BuildControl.module.css";
 
 const buildControl = (props) => (
   <div className={styles.BuildControl}>
-    <div className={styles.Label}>{props.label}</div>
+    <div className={styles.Label}>
+      {props.label} ({props.price}$)
+    </div>
     <button
       className={styles.Less}
       onClick={props.remove}
