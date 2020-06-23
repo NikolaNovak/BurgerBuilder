@@ -2,7 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
-import styles from "./Burger.module.css";
+import classes from "./Burger.module.css";
 
 const burger = (props) => {
   let transformedIngredients = Object.keys(props.ingredients)
@@ -19,7 +19,7 @@ const burger = (props) => {
   }
 
   return (
-    <div className={styles.Burger}>
+    <div className={classes.Burger}>
       <BurgerIngredient type="bread-top" />
       {transformedIngredients}
       <BurgerIngredient type="bread-bottom" />

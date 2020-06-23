@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import styles from "./Modal.module.css";
 import Aux from "../../../hoc/Auxiliary/Auxiliary";
 import Backdrop from "../Backdrop/Backdrop";
+import classes from "./Modal.module.css";
 
 class Modal extends Component {
   shouldComponentUpdate(nextProps, nextState) {
@@ -17,7 +17,7 @@ class Modal extends Component {
       <Aux>
         <Backdrop show={this.props.show} clicked={this.props.modalClose} />
         <div
-          className={styles.Modal}
+          className={classes.Modal}
           style={{
             transform: this.props.show ? "translateY(0)" : "translateY(-100vh)",
             opacity: this.props.show ? "1" : "0",

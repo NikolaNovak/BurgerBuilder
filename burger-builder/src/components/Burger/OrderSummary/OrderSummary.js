@@ -10,7 +10,10 @@ const orderSummary = (props) => {
         <span style={{ textTransform: "capitalize" }}>{igKey}</span>:{" "}
         {props.ingredients[igKey]} x {props.ingredientPrices[igKey]}$ ={" "}
         <strong>
-          {props.ingredients[igKey] * props.ingredientPrices[igKey]}$
+          {(props.ingredients[igKey] * props.ingredientPrices[igKey]).toFixed(
+            2
+          )}
+          $
         </strong>
       </li>
     );
