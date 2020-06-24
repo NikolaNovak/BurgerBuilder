@@ -24,6 +24,11 @@
   border-color: rgba(255, 255, 255, 1);
 }
 
+.Button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .Success {
   background-color: #61d627;
 }
