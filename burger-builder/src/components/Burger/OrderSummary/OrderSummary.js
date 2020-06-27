@@ -2,18 +2,16 @@ import React from "react";
 
 import Aux from "../../../hoc/Auxiliary/Auxiliary";
 import Button from "../../UI/Button/Button";
+import * as constants from "../../../constants/ingredient-prices";
 
 const orderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients).map((igKey) => {
     return (
       <li key={igKey}>
-        <span style={{ textTransform: "capitalize" }}>{igKey}</span>:{" "}
-        {props.ingredients[igKey]} x {props.ingredientPrices[igKey]}$ ={" "}
+        <span style={{ textTransform: "capitalize" }}>{igKey}</span>: {props.ingredients[igKey]} x{" "}
+        {constants.INGREDIENT_PRICES[igKey]}$ ={" "}
         <strong>
-          {(props.ingredients[igKey] * props.ingredientPrices[igKey]).toFixed(
-            2
-          )}
-          $
+          {(props.ingredients[igKey] * constants.INGREDIENT_PRICES[igKey]).toFixed(2)}$
         </strong>
       </li>
     );

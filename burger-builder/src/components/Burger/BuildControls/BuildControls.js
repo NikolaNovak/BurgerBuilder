@@ -2,6 +2,7 @@ import React from "react";
 
 import classes from "./BuildControls.module.css";
 import BuildControl from "./BuildControl/BuildControl";
+import * as constants from "../../../constants/ingredient-prices";
 
 const controls = [
   { label: "Salad", type: "salad" },
@@ -22,13 +23,13 @@ const buildControls = (props) => (
         add={() => props.addIngredient(ctrl.type)}
         remove={() => props.removeIngredient(ctrl.type)}
         disabled={props.disabled[ctrl.type]}
-        price={props.ingredientPrices[ctrl.type]}
+        price={constants.INGREDIENT_PRICES[ctrl.type]}
       />
     ))}
     <button
       className={classes.OrderButton}
       disabled={!props.purchasable}
-      onClick={props.order}
+      onClick={props.orderClicked}
     >
       ORDER NOW
     </button>
