@@ -103,9 +103,11 @@ class ContactData extends Component {
       formData[formElementIdentifier] = this.state.orderForm[formElementIdentifier].value;
     }
 
+    const fixedPrice = this.props.price.toFixed(2);
+
     const order = {
       ingredients: this.props.ings,
-      price: this.props.price,
+      price: fixedPrice,
       orderData: formData,
     };
 
