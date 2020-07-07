@@ -1,4 +1,5 @@
 import * as actionTypes from "./actionTypes";
+import { API_KEY } from "../../api";
 import axios from "axios";
 
 export const authStart = () => {
@@ -31,12 +32,9 @@ export const auth = (email, password, isSignUp) => {
       returnSecureToken: true,
     };
 
-    let url =
-      "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD6_ImvPlhFzlIl5m-1SGgKRIqV1YvP6wY";
+    let url = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${API_KEY}`;
 
-    if (isSignUp)
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyD6_ImvPlhFzlIl5m-1SGgKRIqV1YvP6wY";
+    if (isSignUp) url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${API_KEY}`;
 
     axios
       .post(url, authData)
@@ -44,8 +42,7 @@ export const auth = (email, password, isSignUp) => {
         dispatch(authSuccess(response.data.idToken, response.data.localId));
       })
       .catch((error) => {
-        console.log(error);
-        dispatch(authFail(error));
+        dispatch(authFail(error.response.data.error));
       });
   };
 };
