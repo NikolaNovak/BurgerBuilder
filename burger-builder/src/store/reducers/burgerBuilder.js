@@ -1,6 +1,6 @@
 import * as actionTypes from "../actions/actionTypes";
 import * as constants from "../../constants/ingredient-prices";
-import { updateObject } from "../utility";
+import { updateObject } from "../../shared/utility";
 
 const initialState = {
   ingredients: null,
