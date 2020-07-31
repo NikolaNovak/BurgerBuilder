@@ -16,7 +16,6 @@ export const BurgerBuilder = (props) => {
   const { onInitIngredients } = props;
 
   useEffect(() => {
-    console.log("ON INIT INGR USE EFF");
     onInitIngredients();
   }, [onInitIngredients]);
 
