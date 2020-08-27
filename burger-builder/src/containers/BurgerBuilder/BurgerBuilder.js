@@ -81,6 +81,7 @@ export const BurgerBuilder = (props) => {
           price={price}
           orderClicked={purchaseHandler}
           isAuth={isAuthenticated}
+          ingredients={ings}
         />
       </Aux>
     );

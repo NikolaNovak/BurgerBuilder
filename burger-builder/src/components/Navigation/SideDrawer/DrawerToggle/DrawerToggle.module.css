@@ -11,9 +11,15 @@
 }
 
 .DrawerToggle div {
-  width: 90%;
-  height: 3px;
   background-color: white;
+  filter: drop-shadow(1px 1px 3px black);
+  border-radius: 3px;
+  display: block;
+  width: 33px;
+  height: 4px;
+  position: relative;
+  border-radius: 3px;
+  z-index: 1;
 }
 
 @media (min-width: 500px) {

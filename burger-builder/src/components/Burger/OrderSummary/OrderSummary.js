@@ -8,10 +8,10 @@ const orderSummary = (props) => {
   const ingredientSummary = Object.keys(props.ingredients).map((igKey) => {
     return (
       <li key={igKey}>
-        <span style={{ textTransform: "capitalize" }}>{igKey}</span>: {props.ingredients[igKey]} x{" "}
-        {constants.INGREDIENT_PRICES[igKey]}$ ={" "}
+        <span style={{ textTransform: "capitalize" }}>{igKey}</span>: {props.ingredients[igKey]} x $
+        {constants.INGREDIENT_PRICES[igKey]} ={" "}
         <strong>
-          {(props.ingredients[igKey] * constants.INGREDIENT_PRICES[igKey]).toFixed(2)}$
+          ${(props.ingredients[igKey] * constants.INGREDIENT_PRICES[igKey]).toFixed(2)}
         </strong>
       </li>
     );
@@ -23,15 +23,15 @@ const orderSummary = (props) => {
       <p>A delicious burger with the following ingredients:</p>
       <ul>
         <li>
-          Top Bun: <strong>2.5$</strong>
+          Top Bun = <strong>$2.5</strong>
         </li>
         {ingredientSummary}
         <li>
-          Bottom Bun: <strong>1.5$</strong>
+          Bottom Bun = <strong>$1.5</strong>
         </li>
       </ul>
       <p>
-        <strong>Total price: {props.price.toFixed(2)}$</strong>
+        <strong>Total price: ${props.price.toFixed(2)}</strong>
       </p>
       <p>Continue to Checkout?</p>
       <Button buttonType="Danger" clicked={props.purchaaseCancel}>

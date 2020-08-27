@@ -12,26 +12,45 @@
 
 .InputElement {
   outline: none;
-  border: 1px solid #ccc;
-  background-color: white;
+  border: none;
+  border-bottom: 4px dashed black;
+  background-color: transparent;
   font: inherit;
   padding: 6px 10px;
   display: block;
   width: 100%;
   box-sizing: border-box;
+  text-shadow: 0.1em 0.1em 0.04em rgba(0, 0, 0, 0.35);
+  color: white;
+  box-shadow: 0 4px 6px -6px #222;
+  font-weight: bold;
+  transition: all 0.3s;
 }
 
+.InputElement:hover,
 .InputElement:focus {
   outline: none;
-  background-color: #ccc;
+  border-bottom: 4px dashed white;
 }
 
+.Select option {
+  color: white;
+  text-shadow: none;
+  background-color: #1b1b1b;
+  font-weight: bold;
+}
+
+.InputElement::placeholder {
+  color: black;
+  text-shadow: none;
+}
 .Invalid {
-  border: 1px solid red;
-  background-color: rgb(250, 150, 138);
+  border-bottom: 4px dashed rgb(255, 0, 0);
 }
 
 .ValidationError {
-  color: red;
+  color: white;
   margin: 5px 0 0 0;
+  text-shadow: 0.1em 0.1em 0.04em rgba(0, 0, 0, 0.35);
+  font-weight: bold;
 }
