@@ -95,7 +95,18 @@ const Auth = (props) => {
 
   let errorMessage = null;
 
-  if (props.error) errorMessage = <p style={{ color: "red" }}>{props.error.message}</p>;
+  if (props.error)
+    errorMessage = (
+      <p
+        style={{
+          color: "white",
+          textShadow: "0.1em 0.1em 0.04em rgba(0, 0, 0, 0.35)",
+          fontWeight: "bold",
+        }}
+      >
+        {props.error.message}
+      </p>
+    );
 
   let authRedirect = null;
 
