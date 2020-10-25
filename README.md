@@ -1,4 +1,4 @@
-# BurgerBuilderApp
+# Burger Builder App
 
 A Burger Builder app which allows users to:
 
