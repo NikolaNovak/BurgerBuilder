@@ -1,5 +1,12 @@
-# BurgerBuilderApp [React.js]
+# BurgerBuilderApp
 
-An app that allows you to dynamically build your own burger and buy it.
+A Burger Builder app which allows users to:
 
-Link: https://burgerbuilder-78d7a.web.app/
+- Dynamically build their own burger
+- Buy the built burger
+- Check their previous orders (via Firebase Realtime DB)
+- Register, Sign-in & Sign-out (via Firebase Auth)
+
+Hosting, authentication & database achieved with Firebase.
+
+Link to live app: https://burgerbuilder-78d7a.web.app/
